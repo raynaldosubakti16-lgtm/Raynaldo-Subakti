@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#1e242b">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Sand Cone Scientific Calculator — SNI 03-2828 / ASTM D 1556</title>
+<style>
+  :root {
+    --bg-chassis: #181c22;
+    --bg-body: #222730;
+    --bg-panel: #2a303b;
+    --bg-key: #343b48;
+    --bg-key-hover: #3e4756;
+    --border-chassis: #3d4554;
+    --border-subtle: rgba(255, 255, 255, 0.09);
+
+    --lcd-bg: #c7d6c3;
+    --lcd-bg-deep: #b8c9b4;
+    --lcd-border: #556254;
+    --lcd-ink: #131c15;
+    --lcd-ink-soft: #37473a;
+    --lcd-grid: rgba(19, 28, 21, 0.14);
+
+    --key-orange: #e06d24;
+    --key-orange-dark: #b85314;
+    --key-teal: #1d9a8c;
+    --key-blue: #3b82f6;
+    --key-red: #dc2626;
+    --text-main: #f1f5f9;
+    --text-muted: #9aa5b4;
+    --text-dim: #737f90;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+
+  body.theme-light {
+    --bg-chassis: #d6dbe2;
+    --bg-body: #e5e9ef;
+    --bg-panel: #f4f6f9;
+    --bg-key: #ffffff;
+    --bg-key-hover: #edf1f7;
+    --border-chassis: #b3bcc9;
+    --border-subtle: rgba(15, 23, 42, 0.12);
+
+    --lcd-bg: #d9e6d5;
+    --lcd-bg-deep: #cad9c5;
+    --lcd-border: #788876;
+    --lcd-ink: #111a13;
+    --lcd-ink-soft: #3a4a3d;
+    --lcd-grid: rgba(17, 26, 19, 0.13);
+
+    --key-orange: #d95d18;
+    --key-orange-dark: #b2470d;
+    --key-teal: #0f766e;
+    --key-blue: #2563eb;
+    --key-red: #dc2626;
+    --text-main: #18202c;
+    --text-muted: #4b5563;
+    --text-dim: #6b7280;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    background-color: var(--bg-chassis);
+    background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
+    background-size: 16px 16px;
+    color: var(--text-main);
+    min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .calc-shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 12px 12px 84px;
+  }
+
+  /* Scientific Calculator Header */
+  .calc-header {
+    background: var(--bg-body);
+    border: 2px solid var(--border-chassis);
+    border-radius: 16px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25), 0 12px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-plate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 240px;
+  }
+
+  .model-chip {
+    background: var(--key-teal);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 9px;
+    letter-spacing: 0.4px;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.28);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.15;
+  }
+
+  .model-chip small {
+    display: block;
+    font-size: 9px;
+    opacity: 0.92;
+    font-weight: 700;
+  }
+
+  .title-wrap { flex: 1; }
+
+  .title-input {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-chassis);
+    color: var(--text-main);
+    font-size: 14.5px;
+    font-weight: 800;
+    border-radius: 8px;
+    padding: 5px 9px;
+    outline: none;
+  }
+
+  .title-input:focus { border-color: var(--key-teal); }
+
+  .spec-subtitle {
+    margin: 4px 0 0 2px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+  }
+
+  /* Tactile Calculator Keypad */
+  .keypad-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .calc-btn {
+    background: var(--bg-key);
+    color: var(--text-main);
+    border: 1px solid var(--border-chassis);
+    border-bottom-width: 3px;
+    border-radius: 9px;
+    padding: 7px 11px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.06s, background-color 0.15s;
+  }
+
+  .calc-btn:hover { background: var(--bg-key-hover); }
+  .calc-btn:active {
+    transform: translateY(2px);
+    border-bottom-width: 1px;
+  }
+
+  .btn-del {
+    background: var(--key-orange);
+    border-color: var(--key-orange-dark);
+    color: #ffffff;
+  }
+  .btn-del:hover { background: #ea772e; }
+
+  .btn-exe {
+    background: var(--key-teal);
+    border-color: #136f65;
+    color: #ffffff;
+  }
+  .btn-exe:hover { background: #23b0a0; }
+
+  .btn-blue {
+    background: var(--key-blue);
+    border-color: #1d4ed8;
+    color: #ffffff;
+  }
+  .btn-blue:hover { background: #4f8ff7; }
+
+  .btn-danger {
+    background: var(--key-red);
+    border-color: #991b1b;
+    color: #ffffff;
+  }
+
+  /* Multi-Line High-Contrast Scientific LCD Screen */
+  .lcd-bezel {
+    background: #111519;
+    padding: 8px;
+    border-radius: 15px;
+    border: 2px solid var(--border-chassis);
+    margin-bottom: 12px;
+    box-shadow: inset 0 3px 8px rgba(0,0,0,0.65);
+  }
+
+  .lcd-screen {
+    background: linear-gradient(180deg, var(--lcd-bg) 0%, var(--lcd-bg-deep) 100%);
+    border: 2px solid var(--lcd-border);
+    border-radius: 9px;
+    padding: 11px 14px;
+    color: var(--lcd-ink);
+    font-family: var(--font-mono);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.16);
+  }
+
+  .lcd-status-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    border-bottom: 1px solid var(--lcd-grid);
+    padding-bottom: 6px;
+    margin-bottom: 9px;
+    letter-spacing: 0.4px;
+  }
+
+  .lcd-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .lcd-tag {
+    background: var(--lcd-ink);
+    color: var(--lcd-bg);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 9.5px;
+  }
+
+  .lcd-tag.outline {
+    background: transparent;
+    color: var(--lcd-ink);
+    border: 1px solid var(--lcd-ink);
+  }
+
+  .lcd-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 780px) {
+    .lcd-metrics { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .lcd-cell {
+    border-right: 1px dashed var(--lcd-grid);
+    padding-right: 8px;
+  }
+
+  .lcd-cell:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  @media (max-width: 780px) {
+    .lcd-cell:nth-child(2) { border-right: none; }
+  }
+
+  .lcd-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--lcd-ink-soft);
+    text-transform: uppercase;
+  }
+
+  .lcd-num {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    margin: 2px 0;
+    line-height: 1.1;
+  }
+
+  .lcd-sub {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--lcd-ink-soft);
+  }
+
+  .lcd-verdict {
+    display: inline-block;
+    margin-top: 3px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 900;
+    border: 1.5px solid var(--lcd-ink);
+  }
+  .lcd-verdict.pass {
+    background: var(--lcd-ink);
+    color: var(--lcd-bg);
+  }
+  .lcd-verdict.fail {
+    background: transparent;
+    color: #991b1b;
+    border-color: #991b1b;
+  }
+
+  /* Parameter & Setup Card */
+  .param-card {
+    background: var(--bg-body);
+    border: 1px solid var(--border-chassis);
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+
+  .param-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .param-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .p-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .p-field label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  select, input[type="text"], input[type="number"], input[type="date"] {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-chassis);
+    color: var(--text-main);
+    border-radius: 8px;
+    padding: 7px 9px;
+    font-size: 12.5px;
+    outline: none;
+    width: 100%;
+  }
+
+  select:focus, input:focus {
+    border-color: var(--key-teal);
+    box-shadow: 0 0 0 2px rgba(29, 154, 140, 0.22);
+  }
+
+  /* Workspace Split */
+  .workspace {
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  @media (max-width: 920px) {
+    .workspace { grid-template-columns: 1fr; }
+  }
+
+  .module-box {
+    background: var(--bg-body);
+    border: 1px solid var(--border-chassis);
+    border-radius: 14px;
+    padding: 13px;
+  }
+
+  .module-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .module-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--key-teal);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Sand Cone Form Matrix (Matches Excel Rows & ISI Markers) */
+  table.sc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sc-table th {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 7px 6px;
+    border-bottom: 1.5px solid var(--border-chassis);
+    text-align: left;
+  }
+
+  .sc-table td {
+    padding: 6px 6px;
+    border-bottom: 1px solid var(--border-subtle);
+    vertical-align: middle;
+  }
+
+  .sc-table tr.sec-row td {
+    background: rgba(29, 154, 140, 0.11);
+    color: var(--key-teal);
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  .sc-table tr.isi-row {
+    background: rgba(59, 130, 246, 0.06);
+  }
+
+  .sc-table tr.result-row {
+    background: rgba(29, 154, 140, 0.14);
+    font-weight: 800;
+  }
+
+  .sym-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .isi-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: var(--key-blue);
+    color: #fff;
+  }
+
+  .auto-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid var(--border-chassis);
+    color: var(--text-muted);
+  }
+
+  .sc-input {
+    width: 115px !important;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 14px !important;
+    padding: 6px 8px !important;
+    border: 1.5px solid var(--key-teal) !important;
+    background: var(--bg-panel) !important;
+  }
+
+  .auto-val {
+    font-family: var(--font-mono);
+    font-size: 13.5px;
+    font-weight: 800;
+    text-align: right;
+    display: block;
+    padding-right: 4px;
+  }
+
+  /* LCD Graph Screen */
+  .graph-lcd {
+    background: linear-gradient(180deg, var(--lcd-bg) 0%, var(--lcd-bg-deep) 100%);
+    border: 2px solid var(--lcd-border);
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .report-box {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-chassis);
+    color: var(--text-main);
+    border-radius: 9px;
+    padding: 9px 10px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    line-height: 1.45;
+    resize: none;
+  }
+
+  .saved-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 260px;
+    overflow-y: auto;
+  }
+
+  .saved-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-chassis);
+    border-radius: 9px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .saved-info {
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .saved-info strong {
+    display: block;
+    font-size: 12.5px;
+    font-family: var(--font-mono);
+  }
+
+  .saved-info span {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .saved-btns {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #111519;
+    color: #d9e6d5;
+    border: 1.5px solid var(--key-teal);
+    font-family: var(--font-mono);
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    transition: transform 0.22s ease;
+    z-index: 999;
+    white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  @media print {
+    .keypad-bar, .calc-btn, .toast, .report-box { display: none !important; }
+    body { background: #fff; color: #000; }
+    .calc-header, .lcd-bezel, .param-card, .module-box {
+      background: #fff !important;
+      color: #000 !important;
+      border: 1px solid #cbd5e1 !important;
+      box-shadow: none !important;
+    }
+    .lcd-screen, .graph-lcd { background: #f8fafc !important; color: #000 !important; border-color: #94a3b8 !important; }
+    .sc-input, .title-input { border: none !important; background: transparent !important; color: #000 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="calc-shell">
+  <!-- Scientific Calculator Top Header -->
+  <header class="calc-header">
+    <div class="brand-plate">
+      <div class="model-chip">
+        <img src="data:image/png;base64,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" alt="Sand Cone" style="width:36px; height:36px; border-radius:7px; display:block;">
+        <div style="text-align:left;">SC-1556<small>SNI 03-2828</small></div>
+      </div>
+      <div class="title-wrap">
+        <input type="text" id="customTitle" class="title-input" value="FIELD COMPACTION (SANDCONE) — IGP POMALAA" placeholder="Ketik Judul Lembar Kerja..." oninput="saveMeta(); recalculate();">
+        <div class="spec-subtitle">SNI 03-2828-1992 / ASTM D 1556 &bull; FDD = (&gamma;d lap / MDD) &times; 100%</div>
+      </div>
+    </div>
+
+    <div class="keypad-bar">
+      <button class="calc-btn" id="themeBtn" onclick="toggleTheme()">&#9728; Light</button>
+      <button class="calc-btn btn-exe" onclick="saveCurrentPoint()">STO + Simpan</button>
+      <button class="calc-btn btn-blue" onclick="copyReport()">COPY Data</button>
+      <button class="calc-btn" onclick="exportCSV()">CSV</button>
+      <button class="calc-btn" onclick="window.print()">PRINT</button>
+    </div>
+  </header>
+
+  <!-- Multi-Line Scientific LCD Screen -->
+  <section class="lcd-bezel">
+    <div class="lcd-screen">
+      <div class="lcd-status-strip">
+        <div class="lcd-tags">
+          <span class="lcd-tag">SNI 03-2828</span>
+          <span class="lcd-tag outline" id="lcdConeTag">Ws=1614g | &gamma;p=1.415</span>
+          <span class="lcd-tag outline" id="lcdLabTag">MDD=2.140 | OMC=9.76%</span>
+        </div>
+        <span id="lcdStaAvgTag">STA AVG (0 PTS): -</span>
+      </div>
+
+      <div class="lcd-metrics">
+        <div class="lcd-cell">
+          <div class="lcd-lbl">Field Density Degree</div>
+          <div class="lcd-num" id="lcdFdd">0.00%</div>
+          <div class="lcd-sub" id="lcdFddDiff">Min Spec: 100.0%</div>
+        </div>
+        <div class="lcd-cell">
+          <div class="lcd-lbl">Dry Density (&gamma;d lap)</div>
+          <div class="lcd-num" id="lcdDryDens">0.000</div>
+          <div class="lcd-sub" id="lcdWetDensSub">Wet &gamma;s: 0.000 g/cm&sup3;</div>
+        </div>
+        <div class="lcd-cell">
+          <div class="lcd-lbl">Water Content (Wc)</div>
+          <div class="lcd-num" id="lcdWc">0.00%</div>
+          <div class="lcd-sub" id="lcdOmcDiff">vs OMC (9.76%): -</div>
+        </div>
+        <div class="lcd-cell">
+          <div class="lcd-lbl">QC Compaction Check</div>
+          <div id="lcdVerdictWrap"><span class="lcd-verdict pass">PASS SPEC</span></div>
+          <div class="lcd-sub" id="lcdVolSub" style="margin-top:4px;">Vol Lubang: 0 cm&sup3;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project & Lab Reference Setup -->
+  <section class="param-card">
+    <div class="param-grid">
+      <div class="p-field">
+        <label>Tanggal Uji</label>
+        <input type="date" id="metaDate" oninput="recalculate(); saveMeta();">
+      </div>
+      <div class="p-field">
+        <label>STA / Lokasi</label>
+        <input type="text" id="metaSta" value="PB5N STA 0+00-0+200" placeholder="Contoh: PB5N STA 0+00-0+200" oninput="recalculate(); saveMeta();">
+      </div>
+      <div class="p-field">
+        <label>Point of Test</label>
+        <input type="text" id="metaPoint" value="Point 1" placeholder="Contoh: Point 1" oninput="recalculate(); saveMeta();">
+      </div>
+      <div class="p-field">
+        <label>Layer &amp; Min Compaction</label>
+        <select id="metaLayer" onchange="applyLayerPreset()">
+          <option value="Wearing Coarse" data-spec="98" data-mdd="2.14" data-omc="9.76" selected>Wearing Coarse (Min 98%)</option>
+          <option value="Subgrade" data-spec="95" data-mdd="1.85" data-omc="13.50">Subgrade (Min 95%)</option>
+        </select>
+      </div>
+      <div class="p-field">
+        <label>Kode Alat SC / Speedy</label>
+        <input type="text" id="metaTool" value="TGP 02 / PTP 05" placeholder="TGP 02 / PTP 05" oninput="recalculate(); saveMeta();">
+      </div>
+      <div class="p-field">
+        <label>Min Spec FDD (%)</label>
+        <input type="number" id="minSpec" step="0.5" value="98" oninput="recalculate(); saveMeta();">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <div class="workspace">
+    <!-- Left: Sand Cone Form Matrix (Highlighting the exact 'ISI' columns from Excel) -->
+    <div class="module-box">
+      <div class="module-head">
+        <div class="module-title">&#9638; Form Input Sand Cone (Kolom ISI)</div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+          <button class="calc-btn" style="padding:5px 9px; font-size:11px;" onclick="loadSamplePB5N()">Contoh PB5N</button>
+          <button class="calc-btn btn-del" style="padding:5px 9px; font-size:11px;" onclick="clearFieldInputs()">AC / Reset Titik</button>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>Item Pengujian (Form SNI 03-2828)</th>
+              <th>Simbol</th>
+              <th>Status</th>
+              <th style="text-align:right;">Nilai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- I. Kalibrasi Sand Cone -->
+            <tr class="sec-row"><td colspan="4">I. KALIBRASI SAND CONE</td></tr>
+            <tr class="isi-row">
+              <td>A. Berat Pasir di Corong (g)</td>
+              <td class="sym-badge">Ws</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_ws" class="sc-input" value="1614" oninput="recalculate(); saveMeta();" onkeydown="navNext(event, 'inp_gammap')" onfocus="this.select()"></td>
+            </tr>
+            <tr class="isi-row">
+              <td>B. Berat Volume Pasir (g/cm&sup3;)</td>
+              <td class="sym-badge">&gamma;p</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.001" id="inp_gammap" class="sc-input" value="1.415" oninput="recalculate(); saveMeta();" onkeydown="navNext(event, 'inp_omc')" onfocus="this.select()"></td>
+            </tr>
+
+            <!-- II. Data Laboratorium Proctor -->
+            <tr class="sec-row"><td colspan="4">II. DATA PROCTOR LAB (WEIGHT DENSITY TEST)</td></tr>
+            <tr class="isi-row">
+              <td>1. Optimum Water Content / OMC (%)</td>
+              <td class="sym-badge">Wopt</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.01" id="inp_omc" class="sc-input" value="9.76" oninput="recalculate(); saveMeta();" onkeydown="navNext(event, 'inp_mdd')" onfocus="this.select()"></td>
+            </tr>
+            <tr class="isi-row">
+              <td>2. Maximum Dry Density / MDD (g/cm&sup3;)</td>
+              <td class="sym-badge">&gamma;dm lab</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.001" id="inp_mdd" class="sc-input" value="2.14" oninput="recalculate(); saveMeta();" onkeydown="navNext(event, 'inp_w1')" onfocus="this.select()"></td>
+            </tr>
+
+            <!-- III. Water Content (Speedy) -->
+            <tr class="sec-row"><td colspan="4">III. WATER CONTENT (SPEEDY MOISTURE TESTER)</td></tr>
+            <tr class="isi-row">
+              <td>1. Pembacaan Jarum Speedy (%)</td>
+              <td class="sym-badge">W1</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_w1" class="sc-input" placeholder="0.0" oninput="onSpeedyReadingInput()" onkeydown="navNext(event, 'inp_wc')" onfocus="this.select()"></td>
+            </tr>
+            <tr class="isi-row">
+              <td>
+                2. Koreksi Nilai Speedy (%)
+                <div style="margin-top:3px;">
+                  <label style="font-size:10.5px; color:var(--text-muted); cursor:pointer; display:inline-flex; align-items:center; gap:4px;">
+                    <input type="checkbox" id="autoSpeedyCal" checked onchange="onSpeedyReadingInput()" style="width:auto; margin:0;">
+                    Auto-Kalibrasi PTP-05 (0.94&times;W1 &minus; 3.54)
+                  </label>
+                </div>
+              </td>
+              <td class="sym-badge">w / Wc</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.01" id="inp_wc" class="sc-input" placeholder="0.00" oninput="recalculate()" onkeydown="navNext(event, 'inp_w6')" onfocus="this.select()"></td>
+            </tr>
+
+            <!-- IV. Stockpile / Field Density -->
+            <tr class="sec-row"><td colspan="4">IV. FIELD DENSITY (BERAT TANAH &amp; PASIR)</td></tr>
+            <tr class="isi-row">
+              <td>1. Berat Tanah Basah + Wadah (g)</td>
+              <td class="sym-badge">W6</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_w6" class="sc-input" placeholder="0" oninput="recalculate()" onkeydown="navNext(event, 'inp_w7')" onfocus="this.select()"></td>
+            </tr>
+            <tr class="isi-row">
+              <td>2. Berat Wadah (g)</td>
+              <td class="sym-badge">W7</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_w7" class="sc-input" value="10" oninput="recalculate(); saveMeta();" onkeydown="navNext(event, 'inp_w4')" onfocus="this.select()"></td>
+            </tr>
+            <tr>
+              <td>3. Berat Tanah Basah (g)</td>
+              <td class="sym-badge">W8 = W6 &minus; W7</td>
+              <td><span class="auto-pill">AUTO</span></td>
+              <td><span class="auto-val" id="out_w8">0.0</span></td>
+            </tr>
+            <tr class="isi-row">
+              <td>4. Berat Botol + Corong + Pasir Sebelum Dituang (g)</td>
+              <td class="sym-badge">W4</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_w4" class="sc-input" placeholder="0" oninput="recalculate()" onkeydown="navNext(event, 'inp_w5')" onfocus="this.select()"></td>
+            </tr>
+            <tr class="isi-row">
+              <td>5. Berat Botol + Corong + Pasir Setelah Dituang (g)</td>
+              <td class="sym-badge">W5</td>
+              <td><span class="isi-pill">ISI</span></td>
+              <td style="text-align:right;"><input type="number" inputmode="decimal" step="0.1" id="inp_w5" class="sc-input" placeholder="0" oninput="recalculate()" onkeydown="handleLastEnter(event)" onfocus="this.select()"></td>
+            </tr>
+            <tr>
+              <td>6. Berat Pasir di Dalam Lubang (g)</td>
+              <td class="sym-badge">W9 = (W4&minus;W5)&minus;Ws</td>
+              <td><span class="auto-pill">AUTO</span></td>
+              <td><span class="auto-val" id="out_w9">0.0</span></td>
+            </tr>
+            <tr>
+              <td>7. Volume Lubang (cm&sup3;)</td>
+              <td class="sym-badge">Ve = W9 / &gamma;p</td>
+              <td><span class="auto-pill">AUTO</span></td>
+              <td><span class="auto-val" id="out_ve">0.00</span></td>
+            </tr>
+            <tr>
+              <td>8. Berat Volume Basah Tanah / Wet Density (g/cm&sup3;)</td>
+              <td class="sym-badge">&gamma;s = W8 / Ve</td>
+              <td><span class="auto-pill">AUTO</span></td>
+              <td><span class="auto-val" id="out_gs">0.000</span></td>
+            </tr>
+            <tr>
+              <td>9. Berat Volume Kering Tanah / Dry Density (g/cm&sup3;)</td>
+              <td class="sym-badge">&gamma;d = &gamma;s / (1+Wc/100)</td>
+              <td><span class="auto-pill">AUTO</span></td>
+              <td><span class="auto-val" id="out_gd">0.000</span></td>
+            </tr>
+
+            <!-- V. Field Density Degree -->
+            <tr class="sec-row"><td colspan="4">V. FIELD DENSITY DEGREE (DERAJAT KEPADATAN)</td></tr>
+            <tr class="result-row">
+              <td>Hasil Kepadatan Lapangan (%)</td>
+              <td class="sym-badge">(&gamma;d lap / &gamma;dm lab)&times;100</td>
+              <td><span class="auto-pill">HASIL</span></td>
+              <td><span class="auto-val" id="out_fdd" style="font-size:16px; color:var(--key-teal);">0.00%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right: LCD Compaction Chart, WA Summary & Saved Points -->
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <div class="module-box">
+        <div class="module-head">
+          <div class="module-title">&#128200; Grafik Komparasi Kepadatan (FDD %)</div>
+          <span style="font-family:var(--font-mono); font-size:10.5px; color:var(--text-muted);" id="chartSubLabel">Titik Aktif + Memori STA</span>
+        </div>
+        <div class="graph-lcd">
+          <svg id="scChart" viewBox="0 0 460 245" style="width:100%; height:auto; display:block;"></svg>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:10.5px; color:var(--text-muted);">
+          <span>&#9632; Derajat Kepadatan Titik (%)</span>
+          <span id="chartSpecNote">-- Garis Min Spec (98%)</span>
+        </div>
+      </div>
+
+      <!-- WhatsApp Summary Output -->
+      <div class="module-box">
+        <div class="module-head" style="margin-bottom:6px;">
+          <div class="module-title">&#128203; Output Ringkasan (Siap Tempel WA)</div>
+          <div style="display:flex; gap:5px;">
+            <button class="calc-btn" style="padding:4px 8px; font-size:11px;" onclick="copyAllStaSummary()">Salin Rekap STA</button>
+            <button class="calc-btn btn-blue" style="padding:4px 9px; font-size:11px;" onclick="copyReport()">Salin Titik</button>
+          </div>
+        </div>
+        <textarea id="reportBox" class="report-box" rows="9" readonly onclick="this.select()"></textarea>
+      </div>
+
+      <!-- Saved Memory Registers -->
+      <div class="module-box">
+        <div class="module-head">
+          <div class="module-title">&#128190; Memori Titik STA (<span id="savedCount">0</span>)</div>
+          <span id="savedAvgLabel" style="font-family:var(--font-mono); font-size:11px; color:var(--key-teal); font-weight:800;">Rata-rata: -</span>
+        </div>
+        <div class="saved-list" id="savedList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Tersimpan!</div>
+
+<script>
+let savedPoints = JSON.parse(localStorage.getItem("sc_calc_points_v1") || "[]");
+let isLight = false;
+
+function toggleTheme() {
+  isLight = !isLight;
+  document.body.classList.toggle("theme-light", isLight);
+  document.getElementById("themeBtn").innerHTML = isLight ? "&#9790; Dark" : "&#9728; Light";
+  localStorage.setItem("sc_calc_theme_v1", isLight ? "light" : "dark");
+  recalculate();
+}
+
+function loadTheme() {
+  if (localStorage.getItem("sc_calc_theme_v1") === "light") {
+    isLight = true;
+    document.body.classList.add("theme-light");
+    document.getElementById("themeBtn").innerHTML = "&#9790; Dark";
+  }
+}
+
+function saveMeta() {
+  const meta = {
+    title: document.getElementById("customTitle").value,
+    sta: document.getElementById("metaSta").value,
+    point: document.getElementById("metaPoint").value,
+    layer: document.getElementById("metaLayer").value,
+    tool: document.getElementById("metaTool").value,
+    spec: document.getElementById("minSpec").value,
+    ws: document.getElementById("inp_ws").value,
+    gammap: document.getElementById("inp_gammap").value,
+    omc: document.getElementById("inp_omc").value,
+    mdd: document.getElementById("inp_mdd").value,
+    w7: document.getElementById("inp_w7").value
+  };
+  localStorage.setItem("sc_calc_meta_v1", JSON.stringify(meta));
+}
+
+function loadMeta() {
+  try {
+    const m = JSON.parse(localStorage.getItem("sc_calc_meta_v1") || "null");
+    if (m) {
+      if (m.title) document.getElementById("customTitle").value = m.title;
+      if (m.sta !== undefined) document.getElementById("metaSta").value = m.sta;
+      if (m.point !== undefined) document.getElementById("metaPoint").value = m.point;
+      if (m.layer) {
+        const mappedLayer = m.layer === "Subgrade / Embankment" ? "Subgrade" : m.layer;
+        if (mappedLayer === "Wearing Coarse" || mappedLayer === "Subgrade") {
+          document.getElementById("metaLayer").value = mappedLayer;
+        } else {
+          document.getElementById("metaLayer").value = "Wearing Coarse";
+          document.getElementById("minSpec").value = "98";
+        }
+      }
+      if (m.tool) document.getElementById("metaTool").value = m.tool;
+      if (m.spec) {
+        const curLayer = document.getElementById("metaLayer").value;
+        if (curLayer === "Wearing Coarse" && m.spec === "100") {
+          document.getElementById("minSpec").value = "98";
+        } else {
+          document.getElementById("minSpec").value = m.spec;
+        }
+      }
+      if (m.ws) document.getElementById("inp_ws").value = m.ws;
+      if (m.gammap) document.getElementById("inp_gammap").value = m.gammap;
+      if (m.omc) document.getElementById("inp_omc").value = m.omc;
+      if (m.mdd) document.getElementById("inp_mdd").value = m.mdd;
+      if (m.w7 !== undefined && m.w7 !== "") document.getElementById("inp_w7").value = m.w7;
+    }
+  } catch (e) {}
+}
+
+function navNext(e, nextId) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const el = document.getElementById(nextId);
+    if (el) el.focus();
+  }
+}
+
+function handleLastEnter(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    recalculate();
+    showToast("Perhitungan selesai! Tekan STO + Simpan untuk simpan titik.");
+  }
+}
+
+function applyLayerPreset() {
+  const sel = document.getElementById("metaLayer");
+  const opt = sel.options[sel.selectedIndex];
+  const spec = opt.getAttribute("data-spec");
+  const mdd = opt.getAttribute("data-mdd");
+  const omc = opt.getAttribute("data-omc");
+  if (spec) document.getElementById("minSpec").value = spec;
+  if (mdd) document.getElementById("inp_mdd").value = mdd;
+  if (omc) document.getElementById("inp_omc").value = omc;
+  saveMeta();
+  recalculate();
+}
+
+function onSpeedyReadingInput() {
+  const w1 = parseFloat(document.getElementById("inp_w1").value);
+  const autoCal = document.getElementById("autoSpeedyCal").checked;
+  if (autoCal && !isNaN(w1)) {
+    // Exact PTP-05 calibration formula from SC Wearing Coarse PB5N.xls:
+    // W1=9 -> 4.92, W1=10 -> 5.86, W1=11 -> 6.80, W1=12 -> 7.74, W1=13 -> 8.68
+    const wc = Math.max(0, 0.94 * w1 - 3.54);
+    document.getElementById("inp_wc").value = wc.toFixed(2);
+  }
+  recalculate();
+}
+
+function loadSamplePB5N() {
+  document.getElementById("metaSta").value = "PB5N STA 0+00-0+200";
+  document.getElementById("metaPoint").value = "Point 1";
+  document.getElementById("metaLayer").value = "Wearing Coarse";
+  document.getElementById("minSpec").value = "98";
+  document.getElementById("inp_ws").value = "1614";
+  document.getElementById("inp_gammap").value = "1.415";
+  document.getElementById("inp_omc").value = "9.76";
+  document.getElementById("inp_mdd").value = "2.14";
+  document.getElementById("inp_w1").value = "11";
+  document.getElementById("inp_wc").value = "6.80";
+  document.getElementById("inp_w6").value = "3566";
+  document.getElementById("inp_w7").value = "10";
+  document.getElementById("inp_w4").value = "7222";
+  document.getElementById("inp_w5").value = "3511";
+  recalculate();
+  showToast("Data sampel Point 1 PB5N dimuat (FDD = 104.99%)");
+}
+
+function clearFieldInputs() {
+  document.getElementById("inp_w1").value = "";
+  document.getElementById("inp_wc").value = "";
+  document.getElementById("inp_w6").value = "";
+  document.getElementById("inp_w4").value = "";
+  document.getElementById("inp_w5").value = "";
+  recalculate();
+  document.getElementById("inp_w1").focus();
+  showToast("Input titik direset");
+}
+
+function formatTanggalIndo(isoStr) {
+  if (!isoStr) return "-";
+  const p = isoStr.split("-");
+  if (p.length !== 3) return isoStr;
+  const bln = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
+  return `${p[2]} ${bln[parseInt(p[1], 10) - 1] || p[1]} ${p[0]}`;
+}
+
+function getCurrentCalc() {
+  const ws     = parseFloat(document.getElementById("inp_ws").value) || 0;
+  const gammap = parseFloat(document.getElementById("inp_gammap").value) || 0;
+  const omc    = parseFloat(document.getElementById("inp_omc").value) || 0;
+  const mdd    = parseFloat(document.getElementById("inp_mdd").value) || 0;
+  const w1     = parseFloat(document.getElementById("inp_w1").value) || 0;
+  const wc     = parseFloat(document.getElementById("inp_wc").value) || 0;
+  const w6     = parseFloat(document.getElementById("inp_w6").value) || 0;
+  const w7     = parseFloat(document.getElementById("inp_w7").value) || 0;
+  const w4     = parseFloat(document.getElementById("inp_w4").value) || 0;
+  const w5     = parseFloat(document.getElementById("inp_w5").value) || 0;
+  const minSpec = parseFloat(document.getElementById("minSpec").value) || 0;
+
+  const w8 = Math.max(0, w6 - w7);
+  const w9 = (w4 > 0 && w5 > 0) ? Math.max(0, (w4 - w5) - ws) : 0;
+  const ve = (gammap > 0 && w9 > 0) ? (w9 / gammap) : 0;
+  const gs = (ve > 0 && w8 > 0) ? (w8 / ve) : 0;
+  const gd = (gs > 0) ? (gs / (1 + wc / 100)) : 0;
+  const fdd = (mdd > 0 && gd > 0) ? ((gd / mdd) * 100) : 0;
+  const isValid = fdd > 0;
+  const pass = isValid && fdd >= minSpec;
+
+  return {
+    title: document.getElementById("customTitle").value || "FIELD COMPACTION (SANDCONE) REPORT",
+    date: document.getElementById("metaDate").value,
+    sta: document.getElementById("metaSta").value || "-",
+    layer: document.getElementById("metaLayer").value,
+    point: document.getElementById("metaPoint").value || "Point 1",
+    tool: document.getElementById("metaTool").value || "-",
+    ws, gammap, omc, mdd, w1, wc, w6, w7, w8, w4, w5, w9, ve, gs, gd, fdd, minSpec, isValid, pass
+  };
+}
+
+function buildSummaryText(c) {
+  const statusStr = !c.isValid ? "BELUM LENGKAP" : (c.pass ? "PASS" : "BELOW SPEC");
+  return `*${c.title.trim()}*
+Tanggal  : ${formatTanggalIndo(c.date)}
+Lokasi   : ${c.sta.trim()}
+Layer    : ${c.layer}
+Point    : ${c.point.trim()}
+MDD / OMC: ${c.mdd.toFixed(3)} g/cm³ | ${c.omc.toFixed(2)}%
+Kadar Air: ${c.wc.toFixed(2)}% (Speedy W1=${c.w1}%)
+Vol Lubang: ${c.ve.toFixed(1)} cm³ (Pasir=${c.w9.toFixed(0)} g)
+Wet / Dry: ${c.gs.toFixed(3)} / ${c.gd.toFixed(3)} g/cm³
+*Kepadatan: ${c.fdd.toFixed(2)}%* (Min ${c.minSpec}% - ${statusStr})`;
+}
+
+function recalculate() {
+  const c = getCurrentCalc();
+
+  document.getElementById("lcdConeTag").textContent = `Ws=${c.ws}g | γp=${c.gammap}`;
+  document.getElementById("lcdLabTag").textContent  = `MDD=${c.mdd.toFixed(3)} | OMC=${c.omc.toFixed(2)}%`;
+
+  document.getElementById("out_w8").textContent = c.w8.toFixed(1);
+  document.getElementById("out_w9").textContent = c.w9.toFixed(1);
+  document.getElementById("out_ve").textContent = c.ve.toFixed(2);
+  document.getElementById("out_gs").textContent = c.gs.toFixed(3);
+  document.getElementById("out_gd").textContent = c.gd.toFixed(3);
+
+  const outFdd = document.getElementById("out_fdd");
+  outFdd.textContent = c.fdd.toFixed(2) + "%";
+  outFdd.style.color = !c.isValid ? "var(--text-muted)" : (c.pass ? "var(--key-teal)" : "var(--key-orange)");
+
+  document.getElementById("lcdFdd").textContent = c.fdd.toFixed(2) + "%";
+  const diff = c.fdd - c.minSpec;
+  document.getElementById("lcdFddDiff").textContent = c.isValid
+    ? `Spec: ${c.minSpec}% (${diff >= 0 ? "+" : ""}${diff.toFixed(2)}%)`
+    : `Min Spec: ${c.minSpec}%`;
+
+  document.getElementById("lcdDryDens").textContent = c.gd.toFixed(3);
+  document.getElementById("lcdWetDensSub").textContent = `Wet γs: ${c.gs.toFixed(3)} g/cm³`;
+
+  document.getElementById("lcdWc").textContent = c.wc.toFixed(2) + "%";
+  const wcDiff = c.wc - c.omc;
+  document.getElementById("lcdOmcDiff").textContent = c.wc > 0
+    ? `vs OMC: ${wcDiff >= 0 ? "+" : ""}${wcDiff.toFixed(2)}%`
+    : `vs OMC (${c.omc.toFixed(2)}%): -`;
+
+  const vWrap = document.getElementById("lcdVerdictWrap");
+  if (!c.isValid) {
+    vWrap.innerHTML = `<span class="lcd-verdict pass">READY INPUT</span>`;
+  } else if (c.pass) {
+    vWrap.innerHTML = `<span class="lcd-verdict pass">&#10003; PASS SPEC</span>`;
+  } else {
+    vWrap.innerHTML = `<span class="lcd-verdict fail">&#10007; BELOW SPEC</span>`;
+  }
+  document.getElementById("lcdVolSub").textContent = `Vol Lubang: ${c.ve.toFixed(1)} cm³`;
+
+  document.getElementById("reportBox").value = buildSummaryText(c);
+  document.getElementById("chartSpecNote").textContent = `-- Garis Min Spec (${c.minSpec}%)`;
+
+  drawChart(c);
+}
+
+function drawChart(curr) {
+  const svg = document.getElementById("scChart");
+  const W = 460, H = 245;
+  const padL = 46, padR = 16, padT = 18, padB = 38;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  const ink = "#131c15";
+  const inkSoft = "#37473a";
+  const gridCol = "rgba(19, 28, 21, 0.16)";
+
+  // Combine saved points (oldest first) + current active point
+  const bars = [...savedPoints].reverse().map(p => ({
+    label: p.point,
+    val: p.fdd,
+    pass: p.pass,
+    active: false
+  }));
+
+  if (curr.isValid) {
+    bars.push({
+      label: curr.point + "*",
+      val: curr.fdd,
+      pass: curr.pass,
+      active: true
+    });
+  }
+
+  const minY = 0;
+  const stepY = 20;
+  const maxVal = Math.max(curr.minSpec + 10, 110, ...bars.map(b => b.val + 8));
+  const maxY = Math.max(120, Math.ceil(maxVal / stepY) * stepY);
+  const yPos = v => padT + plotH - ((Math.max(minY, Math.min(v, maxY)) - minY) / (maxY - minY)) * plotH;
+
+  let html = "";
+  const steps = Math.round((maxY - minY) / stepY);
+  for (let i = 0; i <= steps; i++) {
+    const val = minY + stepY * i;
+    const y = yPos(val);
+    html += `<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="${gridCol}" stroke-width="1"/>`;
+    html += `<text x="${padL - 6}" y="${y + 3.5}" text-anchor="end" fill="${inkSoft}" font-family="monospace" font-size="10" font-weight="700">${val.toFixed(0)}%</text>`;
+  }
+
+  // Min Spec horizontal threshold line
+  if (curr.minSpec >= minY && curr.minSpec <= maxY) {
+    const ys = yPos(curr.minSpec);
+    html += `<line x1="${padL}" y1="${ys}" x2="${W - padR}" y2="${ys}" stroke="#991b1b" stroke-width="1.7" stroke-dasharray="5 3"/>`;
+  }
+
+  if (bars.length > 0) {
+    const slotW = plotW / bars.length;
+    const barW = Math.min(44, slotW * 0.56);
+    bars.forEach((b, idx) => {
+      const cx = padL + slotW * idx + slotW / 2;
+      const topY = yPos(b.val);
+      const baseY = padT + plotH;
+      const bh = Math.max(2, baseY - topY);
+      const fillCol = b.pass ? ink : "#991b1b";
+      html += `<rect x="${cx - barW / 2}" y="${topY}" width="${barW}" height="${bh}" fill="${fillCol}" opacity="${b.active ? '0.78' : '0.95'}"/>`;
+      if (b.active) {
+        html += `<rect x="${cx - barW / 2}" y="${topY}" width="${barW}" height="${bh}" fill="none" stroke="${ink}" stroke-width="1.6" stroke-dasharray="3 2"/>`;
+      }
+      html += `<text x="${cx}" y="${topY - 4}" text-anchor="middle" fill="${fillCol}" font-family="monospace" font-size="9.5" font-weight="800">${b.val.toFixed(1)}%</text>`;
+      const shortLbl = b.label.length > 9 ? b.label.slice(0, 9) : b.label;
+      html += `<text x="${cx}" y="${baseY + 14}" text-anchor="middle" fill="${inkSoft}" font-family="monospace" font-size="9.5" font-weight="700">${shortLbl}</text>`;
+    });
+  } else {
+    html += `<text x="${padL + plotW / 2}" y="${padT + plotH / 2}" text-anchor="middle" fill="${inkSoft}" font-family="monospace" font-size="11" font-weight="700">Isi data Sand Cone untuk melihat grafik</text>`;
+  }
+
+  html += `<rect x="${padL}" y="${padT}" width="${plotW}" height="${plotH}" fill="none" stroke="${ink}" stroke-width="1.4"/>`;
+  html += `<text x="${padL + plotW / 2}" y="${H - 5}" text-anchor="middle" fill="${ink}" font-family="monospace" font-size="10.5" font-weight="800">Titik Pengujian (Field Density Degree %)</text>`;
+  svg.innerHTML = html;
+}
+
+function saveCurrentPoint() {
+  const c = getCurrentCalc();
+  if (!c.isValid) {
+    showToast("Isi berat tanah & pasir terlebih dahulu!");
+    return;
+  }
+  const item = { id: Date.now(), ...c };
+  savedPoints.unshift(item);
+  localStorage.setItem("sc_calc_points_v1", JSON.stringify(savedPoints));
+  renderSavedPoints();
+  recalculate();
+  showToast(`Titik "${c.point}" (FDD ${c.fdd.toFixed(2)}%) disimpan!`);
+}
+
+function loadPoint(id) {
+  const it = savedPoints.find(x => x.id === id);
+  if (!it) return;
+  if (it.title) document.getElementById("customTitle").value = it.title;
+  if (it.date) document.getElementById("metaDate").value = it.date;
+  document.getElementById("metaSta").value = it.sta;
+  document.getElementById("metaLayer").value = it.layer;
+  document.getElementById("metaPoint").value = it.point;
+  document.getElementById("metaTool").value = it.tool || "TGP 02 / PTP 05";
+  document.getElementById("minSpec").value = it.minSpec;
+  document.getElementById("inp_ws").value = it.ws;
+  document.getElementById("inp_gammap").value = it.gammap;
+  document.getElementById("inp_omc").value = it.omc;
+  document.getElementById("inp_mdd").value = it.mdd;
+  document.getElementById("inp_w1").value = it.w1;
+  document.getElementById("inp_wc").value = it.wc;
+  document.getElementById("inp_w6").value = it.w6;
+  document.getElementById("inp_w7").value = it.w7;
+  document.getElementById("inp_w4").value = it.w4;
+  document.getElementById("inp_w5").value = it.w5;
+  saveMeta();
+  recalculate();
+  showToast(`Memuat ${it.point}`);
+}
+
+function copySavedPoint(id, ev) {
+  if (ev) ev.stopPropagation();
+  const it = savedPoints.find(x => x.id === id);
+  if (!it) return;
+  copyWithFallback(buildSummaryText(it), `Hasil ${it.point} disalin!`);
+}
+
+function deleteSavedPoint(id, ev) {
+  if (ev) ev.stopPropagation();
+  savedPoints = savedPoints.filter(x => x.id !== id);
+  localStorage.setItem("sc_calc_points_v1", JSON.stringify(savedPoints));
+  renderSavedPoints();
+  recalculate();
+}
+
+function renderSavedPoints() {
+  const list = document.getElementById("savedList");
+  document.getElementById("savedCount").textContent = savedPoints.length;
+
+  if (savedPoints.length === 0) {
+    document.getElementById("savedAvgLabel").textContent = "Rata-rata: -";
+    document.getElementById("lcdStaAvgTag").textContent = "STA AVG (0 PTS): -";
+    list.innerHTML = `<div style="font-size:11.5px; color:var(--text-dim); text-align:center; padding:14px;">Belum ada titik tersimpan. Tekan <strong>STO + Simpan</strong> untuk merekam Point 1, Point 2, dst.</div>`;
+    return;
+  }
+
+  const avgFdd = savedPoints.reduce((s, x) => s + x.fdd, 0) / savedPoints.length;
+  document.getElementById("savedAvgLabel").textContent = `Rata-rata: ${avgFdd.toFixed(2)}%`;
+  document.getElementById("lcdStaAvgTag").textContent = `STA AVG (${savedPoints.length} PTS): ${avgFdd.toFixed(2)}%`;
+
+  list.innerHTML = savedPoints.map(it => `
+    <div class="saved-card">
+      <div class="saved-info" onclick="loadPoint(${it.id})" title="Klik untuk muat ke kalkulator">
+        <strong>${it.point} &bull; <span style="color:${it.pass ? 'var(--key-teal)' : 'var(--key-orange)'}">${it.fdd.toFixed(2)}% (${it.pass ? 'PASS' : 'FAIL'})</span></strong>
+        <span>${it.sta} | &gamma;d=${it.gd.toFixed(3)} | Wc=${it.wc.toFixed(2)}%</span>
+      </div>
+      <div class="saved-btns">
+        <button class="calc-btn btn-blue" style="padding:4px 8px; font-size:11px;" onclick="copySavedPoint(${it.id}, event)">Salin</button>
+        <button class="calc-btn btn-danger" style="padding:4px 8px; font-size:11px;" onclick="deleteSavedPoint(${it.id}, event)">Hapus</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function copyAllStaSummary() {
+  if (savedPoints.length === 0) {
+    copyReport();
+    return;
+  }
+  const ordered = [...savedPoints].reverse();
+  const avgFdd = ordered.reduce((s, x) => s + x.fdd, 0) / ordered.length;
+  const first = ordered[0];
+  const lines = ordered.map(p =>
+    `- ${p.point}: *${p.fdd.toFixed(2)}%* (γd=${p.gd.toFixed(3)}, Wc=${p.wc.toFixed(2)}%) [${p.pass ? 'PASS' : 'BELOW'}]`
+  ).join("\n");
+
+  const fullTxt = `*REKAP ${first.title.trim()}*
+Tanggal  : ${formatTanggalIndo(first.date)}
+Lokasi   : ${first.sta}
+Layer    : ${first.layer} (Min ${first.minSpec}%)
+MDD / OMC: ${first.mdd.toFixed(3)} g/cm³ | ${first.omc.toFixed(2)}%
+${lines}
+*Rata-rata (${ordered.length} Titik): ${avgFdd.toFixed(2)}%*`;
+
+  copyWithFallback(fullTxt, "Rekap seluruh titik STA disalin!");
+}
+
+function copyWithFallback(text, msg) {
+  const box = document.getElementById("reportBox");
+  box.value = text;
+  box.focus();
+  box.select();
+  box.setSelectionRange(0, 99999);
+  let ok = false;
+  try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+  if (ok) {
+    showToast(msg || "Data berhasil disalin!");
+  } else if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text)
+      .then(() => showToast(msg || "Data berhasil disalin!"))
+      .catch(() => showToast("Teks diblok, ketuk Salin di HP"));
+  } else {
+    showToast("Teks diblok, ketuk Salin di HP");
+  }
+}
+
+function copyReport() {
+  copyWithFallback(document.getElementById("reportBox").value, "Data Sand Cone disalin!");
+}
+
+function exportCSV() {
+  const c = getCurrentCalc();
+  const rows = [
+    [c.title],
+    ["Tanggal", c.date || "-"],
+    ["Location / STA", c.sta],
+    ["Layer", c.layer],
+    ["Point of Test", c.point],
+    ["Kode Alat", c.tool],
+    ["Min Spec FDD (%)", c.minSpec],
+    [],
+    ["No", "Description", "Formula", "Unit", "Value"],
+    ["I.A", "Berat Pasir di Corong", "Ws", "g", c.ws],
+    ["I.B", "Berat Volume Pasir", "γp", "g/cm3", c.gammap],
+    ["II.1", "Optimum Water Content (OMC)", "Wopt", "%", c.omc],
+    ["II.2", "Maximum Dry Density (MDD)", "γdm lab", "g/cm3", c.mdd],
+    ["III.1", "Pembacaan Jarum Speedy", "W1", "%", c.w1],
+    ["III.2", "Koreksi Nilai Speedy", "Wc", "%", c.wc.toFixed(2)],
+    ["IV.1", "Berat Tanah Basah dan Wadah", "W6", "g", c.w6],
+    ["IV.2", "Berat Wadah", "W7", "g", c.w7],
+    ["IV.3", "Berat Tanah Basah", "W8 = W6 - W7", "g", c.w8.toFixed(1)],
+    ["IV.4", "Berat Botol + Corong + Pasir Sebelum Dituang", "W4", "g", c.w4],
+    ["IV.5", "Berat Botol + Corong + Pasir Setelah Dituang", "W5", "g", c.w5],
+    ["IV.6", "Berat Pasir di Dalam Lubang", "W9 = (W4 - W5) - Ws", "g", c.w9.toFixed(1)],
+    ["IV.7", "Volume Lubang", "Ve = W9 / γp", "cm3", c.ve.toFixed(2)],
+    ["IV.8", "Berat Volume Basah Tanah (Wet Density)", "γs = W8 / Ve", "g/cm3", c.gs.toFixed(4)],
+    ["IV.9", "Berat Volume Kering Tanah (Dry Density)", "γd lap = γs / (1 + Wc/100)", "g/cm3", c.gd.toFixed(4)],
+    ["V", "Field Density Degree", "(γd lap / γdm lab) x 100", "%", c.fdd.toFixed(2)]
+  ];
+
+  const csvContent = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\n");
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const pt = c.point.replace(/[^a-zA-Z0-9_-]/g, "_");
+  a.href = url;
+  a.download = `Field_SandCone_${pt}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast("File CSV berhasil diunduh!");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2300);
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(() => {});
+  });
+}
+
+loadTheme();
+loadMeta();
+document.getElementById("metaDate").value = new Date().toISOString().split("T")[0];
+renderSavedPoints();
+recalculate();
+</script>
+</body>
+</html>
